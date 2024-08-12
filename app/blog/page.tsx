@@ -1,4 +1,3 @@
-<h1>holalll</h1>
 export default function Blog() {
     return (
         <div className="content">
