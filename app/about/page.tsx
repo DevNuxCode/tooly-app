@@ -13,7 +13,7 @@ export default async function Page(){
     console.log(data)
     return (
                 <div className="pb-5 pt-6 text-center">
-                    <p>hola loco</p>
+                    <p>{data.content.rendered}</p>
                     <p>id: {data.id}</p>
                     <p>title: {data.title.rendered}</p>
                     
