@@ -1,20 +1,23 @@
-type Repository = {
+type Repo = {
     id: number;
     title: string;
-    rendered: string
+    author: number;
+    _links: string
+    
     
 }
 
 export default async function Page(){
-    const res = await fetch('https://laravel.distribuidoravega.cl/wp-json/wp/v2/posts/');
-    const data: Repository = await res.json();
-    
+    const res = await fetch('https://laravel.distribuidoravega.cl/wp-json/wp/v2/posts/51');
+    const data: Repo = await res.json();
+    console.log(data)
     return (
-                <div>
+                <div className="pb-5 pt-6 text-center">
+                    <p>hola loco</p>
+                    <p>id: {data.id}</p>
+                    <p>title: {data.title.rendered}</p>
                     
-                    <h1>{data[0].title.rendered} </h1><br/>
-                    <p>{data[0].id}</p>
-                    <div>{data[0].author}</div>
+                    
                 
 
                 </div>

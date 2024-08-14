@@ -31,7 +31,7 @@ export default async function RootLayout({
 }>) { 
         const res = await fetch('https://laravel.distribuidoravega.cl/wp-json/wp/v2/posts/');
         const data = await res.json();
-        console.log(data)
+        
        return (
     
     <html lang="en">
